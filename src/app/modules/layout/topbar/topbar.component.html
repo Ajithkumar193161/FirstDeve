@@ -1,0 +1,124 @@
+<mat-toolbar color="primary">
+  <ng-container>
+    <!-- <button class="fa-solid fa-bars"></button> -->
+    <a matTooltipClass="bg-tooltip">
+      <div class="btn btn-icon btn-icon-mobile btn-clean btn-lg me-1" (click)="sidemenu()" id="btnHome">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span> Menu</span>
+      </div>
+    </a>
+    <div class="input-group rounded" style="width: 50%;">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+      <button type="button" class="btn" data-mdb-ripple-init>
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </ng-container>
+  <span class="example-spacer"></span>
+  <ng-container *ngIf="selfLayout !== 'blank';" class="d-flex flex-row-reverse bd-highlight">
+    <div class="d-flex flex-column flex-root">
+      <div class="d-flex flex-row flex-column-fluid page">
+        <ng-container>
+          <ng-container>
+            <span class="example-spacer"></span>
+            <div class="dropdown" ngbDropdown placement="bottom-right">
+              <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px" ngbDropdownToggle>
+                <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" (click)="userdetail()">
+                  <span class="font-weight-bold font-size-base d-none d-md-inline me-1">Hi,</span>
+                  <span
+                    class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline me-3">{{username}}</span>
+                    <!-- <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+                      <span class="symbol-label font-size-h5 font-weight-bold"> {{username1}} </span>
+                    </span> -->
+                    <i class="fa-regular fa-user"></i>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</mat-toolbar>
+<p-sidebar #sidebar [(visible)]="display" position="left" [style]="{background: 'white'}" [showCloseIcon]="false" [baseZIndex]="10000">
+  <div class="d-flex flex-row-reverse">
+    <div class="p-2 bd-highlight">
+      <button type="button" class="custom-close-button" (click)="display = false">
+        <i class="fa-solid fa-xmark p-1"></i>
+      </button>
+    </div>
+  </div>
+  <h1 style="font-weight:normal">Menus</h1>
+  <ng-template pTemplate="content">
+    <ul>
+      <li *ngFor="let list of links">
+        <div class="btn" (click)="menu(list.route)">
+          <span class="menu-icon {{list.icon}}" style="color:black"></span>
+          {{list.label}}
+        </div>
+      </li>
+    </ul>
+  </ng-template>
+</p-sidebar>
+<p-sidebar [(visible)]="display1" position="right" [style]="{background: 'white'}" [showCloseIcon]="false" [baseZIndex]="10000">
+  <div class="d-flex flex-row-reverse">
+    <div class="p-2 bd-highlight">
+      <button type="button" class="custom-close-button" (click)="display1 = false">
+        <i class="fa-solid fa-xmark p-1"></i>
+      </button>
+    </div>
+  </div>
+  <!-- begin::User Panel-->
+<div id="kt_quick_user" class="p-10 show">
+    <!--begin::Header-->
+    <div class="d-flex align-items-center justify-content-between pb-5">
+      <h3 class="font-weight-bold m-0">
+        User Profile
+      </h3>
+      <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
+        <em class="ki ki-close icon-xs text-muted"></em>
+      </a>
+    </div>
+    <!--end::Header-->
+
+    <!--begin::Content-->
+    <div class="pr-5 me-n5">
+      <!--begin::Header-->
+      <div class="d-flex align-items-center mt-5">
+        <div class="symbol symbol-100 me-5">
+          <div class="symbol-label"></div>
+          <em class="symbol-badge bg-success"></em>
+        </div>
+        <div class="d-flex flex-column">
+          <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">
+            <!-- {{ userName }} -->
+          </a>
+          <div class="text-muted mt-1">
+            Application Developer
+          </div>
+          <div class="navi mt-2">
+            <a  class="navi-item" target="_blank" rel="noopener noreferrer">
+              <span class="navi-link p-0 pb-2">
+                <span class="navi-icon me-1">
+                  <span ></span>
+                </span>
+                <span class="navi-text text-muted text-hover-primary">{{emailid}}</span>
+              </span>
+            </a>
+
+            <a class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5 cursor-pointer" >Sign
+              Out</a>
+          </div>
+        </div>
+      </div>
+      <!--end::Header-->
+
+      <!--begin::Separator-->
+      <div class="separator separator-dashed mt-8 mb-5"></div>
+      <!--end::Separator-->
+
+    </div>
+    <!--end::Content-->
+</div>
+<!-- end::User Panel-->
+</p-sidebar>

@@ -1,0 +1,23 @@
+<div class="main-container">  
+    <div class="signin-signup" >
+      <form  class="sign-in-form" [formGroup]="mygroup">
+        <h1>Welcome</h1>
+        <div class="d-flex flex-column bd-highlight">
+            <div class="input-box bd-highlight">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="User Name" formControlName="username"  required>
+            </div> 
+            <div class="input-box bd-highlight">
+                <i class="fa-solid fa-lock"></i>
+                <input [type]="inputtype" placeholder="Password" formControlName="password"  required>
+            </div> 
+            <div class="remember-forget">
+                <label>
+                    <input type="checkbox" (change)="show($event)"> Show password
+                </label>
+            </div>
+        </div>       
+        <button type="submit" class="btn" (click)="login()"> Login</button>
+     </form>
+    </div>
+  </div>

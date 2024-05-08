@@ -1,0 +1,84 @@
+.example-card {
+    max-width: 300px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  section {
+    display: table;
+  }
+  table {
+    width: 100%;
+  }
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: white;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 80%;
+}
+.custom-date-input .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease all;
+    color: #6c757d;
+    font-size: 13px;
+  }
+  .custom-date-input .form-control {
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .custom-date-input.input-group > .form-control,
+  .custom-date-input.input-group > .form-select,
+  .custom-date-input.input-group > .form-floating {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    height: 44px;
+  }
+  
+  .custom-date-input.form-control:focus {
+    color: #3f4254;
+    background-color: #fff;
+    border-color: #ccc;
+  }

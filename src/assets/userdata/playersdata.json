@@ -1,0 +1,37 @@
+[  
+  {  
+    "position": 1,  
+    "Name": "Ajithkumar",  
+    "Gender": "Male",
+    "Status":"Active",
+    "Progress":"100"
+  },  
+  {  
+    "position": 2,  
+    "Name": "Lokesh",  
+    "Gender": "Male" ,
+    "Status":"Active",
+    "Progress":"95"
+  },  
+  {  
+    "position": 3,  
+    "Name": "Saravana",  
+    "Gender": "Male"  ,
+    "Status":"DeActive",
+    "Progress":"70"
+  },  
+  {  
+    "position": 4,  
+    "Name": "venkat",  
+    "Gender": "Male" ,
+    "Status":"DeActive",
+    "Progress":"80"
+  },  
+  {  
+    "position": 5,  
+    "Name": "yoshuva",  
+    "Gender": "Male" ,
+    "Status":"Active",
+    "Progress":"75"
+  }  
+]

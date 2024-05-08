@@ -1,0 +1,51 @@
+// .mat-toolbar-row, .mat-toolbar-single-row {
+//     display: flex;
+//     box-sizing: border-box;
+//     padding: 0 16px;
+//     width: 100%;
+//     flex-direction: row;
+//     align-items: center;
+//     white-space: nowrap;
+//     height: var(--mat-toolbar-standard-height);
+//     flex-direction: row-reverse;
+//     background-color: #35A75a;
+//     color: white;
+// }
+main{
+    display: grid;
+    grid-template-areas: "head head head"
+                        "content content content";
+                        // "foot foot foot" ;
+    // grid-template-rows: 50px auto 50px;
+    grid-template-rows: 65px 100%;
+    // grid-template-columns: 300px auto auto;
+}
+header{grid-area: head;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+// aside{
+//     grid-area: side;
+//     background-color:white;
+//     position: fixed;
+//     top: 65px;
+// }
+article{
+    grid-area: content;
+    background-color: rgb(245, 245, 245);
+}
+app-layout {
+    opacity: 0;
+    height: 100%;
+  
+    .grid-root {
+      height: 100%;
+    }
+  }
+  
+  .page-loaded {
+    app-layout {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+  }

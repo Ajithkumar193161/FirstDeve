@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import "primeicons/primeicons.css";
+@import 'ngx-toastr/toastr';
+@import "~bootstrap/dist/css/bootstrap.css";
+@include mat.core();
+$grocery-primary: mat.define-palette(mat.$indigo-palette);
+$grocery-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$grocery-warn: mat.define-palette(mat.$red-palette);
+$grocery-theme: mat.define-light-theme((
+  color: (
+    primary: $grocery-primary,
+    accent: $grocery-accent,
+    warn: $grocery-warn,
+  )
+));
+@include mat.all-component-themes($grocery-theme);
+
+.grocsbody{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: 500 !important;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

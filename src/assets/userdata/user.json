@@ -1,0 +1,32 @@
+[  
+  {  
+    "id": 1,  
+    "User": "Ajithkumar",  
+    "Password": "Ajith",
+    "MailID":"ajithkumar.smk11@gmail.com"
+  },  
+  {  
+    "id": 2,  
+    "User": "Lokesh",  
+    "Password": "system" ,
+    "MailID":"lokesh@gmail.com"
+  },  
+  {  
+    "id": 3,  
+    "User": "Saravana",  
+    "Password": "system"  ,
+    "MailID":"saravana@gmail.com"
+  },  
+  {  
+    "id": 4,  
+    "User": "venkat",  
+    "Password": "system" ,
+    "MailID":"venkat@gmail.com"
+  },  
+  {  
+    "id": 5,  
+    "User": "yoshuva",  
+    "Password": "system" ,
+    "MailID":"yoshuva@gmail.com"
+  }  
+]
